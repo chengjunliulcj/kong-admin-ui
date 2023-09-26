@@ -116,16 +116,17 @@
 
                                 }
                                 let versionArr = version.split('.');
-                                if (versionArr.length !== 3) {
-                                    this.versionNotSupport(version);
-                                    return;
-                                }
+                               
                                 if (versionArr[0] > 0) {
                                     this.saveConfig();
                                     return;
                                 }
                                 if (versionArr[1] >= 14) {
                                     this.saveConfig();
+                                    return;
+                                }
+                                if (versionArr.length < 3) {
+                                    this.versionNotSupport(version);
                                     return;
                                 }
                                 this.versionNotSupport(version);
