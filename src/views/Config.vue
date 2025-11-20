@@ -125,10 +125,7 @@
                                     this.saveConfig();
                                     return;
                                 }
-                                if (versionArr.length !== 3) {
-                                    this.versionNotSupport(version);
-                                    return;
-                                }
+                              
                                 this.versionNotSupport(version);
                             })
                             .catch(function () {
